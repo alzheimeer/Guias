@@ -1,0 +1,34 @@
+ng new my-app --routing --style=css
+
+ng add @angular/material
+npm install bootstrap @ng-bootstrap/ng-bootstrap
+
+En angular.json debemos incluir los archivos CSS de Bootstrap en los styles:
+"styles": [
+  "src/styles.css",
+  "node_modules/bootstrap/dist/css/bootstrap.min.css" 
+]
+
+
+
+En tsconfig.json se debe agregar lo siguiente para evitar errores:
+"compilerOptions": {
+  ...
+  "paths": {
+    "bootstrap": ["./node_modules/bootstrap"]
+  }
+}
+
+En package.json hay que agregar la dependencia de Bootstrap:
+
+"dependencies": {
+  ...
+  "bootstrap": "^5.1.3"
+}
+
+
+También es recomendado instalar las typings de Bootstrap:
+
+npm install -D @types/bootstrap
+
+Con estas configuraciones, Angular estará listo para importar y usar los estilos y componentes de Bootstrap sin problemas.
