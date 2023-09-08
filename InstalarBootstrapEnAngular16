@@ -3,11 +3,17 @@ ng new my-app --routing --style=css
 ng add @angular/material
 npm install bootstrap @ng-bootstrap/ng-bootstrap
 
+En Styles.scss colocar
+@import "~bootstrap/dist/css/bootstrap.css";
+
 En angular.json debemos incluir los archivos CSS de Bootstrap en los styles:
 "styles": [
   "src/styles.css",
   "node_modules/bootstrap/dist/css/bootstrap.min.css" 
 ]
+"scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
 
 
 
